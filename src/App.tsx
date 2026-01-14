@@ -1,4 +1,4 @@
-import { GitHubBanner, Refine } from '@refinedev/core';
+import { Refine } from '@refinedev/core';
 import { DevtoolsPanel, DevtoolsProvider } from '@refinedev/devtools';
 import { RefineKbar, RefineKbarProvider } from '@refinedev/kbar';
 
@@ -40,7 +40,7 @@ function App() {
                                     meta: { label: 'Home', icon: <Home /> },
                                 },
                                 {
-                                    name: 'subject',
+                                    name: 'subjects',
                                     list: '/subjects',
                                     create: '/subjects/create',
                                     meta: {
