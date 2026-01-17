@@ -26,7 +26,7 @@ const ClassesShow = () => {
                     {isLoading
                         ? 'Loading class details...'
                         : isError
-                        ? 'Failed to laod class details...'
+                        ? 'Failed to load class details...'
                         : 'Class details not found'}
                 </p>
             </ShowView>
@@ -49,11 +49,11 @@ const ClassesShow = () => {
             <ShowViewHeader resource='classes' title='Class Details' />
 
             <div className='banner'>
-                {classDetails.bannerUrl ? (
+                {classDetails.bannerUrl && classDetails.bannerCldPubId ? (
                     <AdvancedImage
                         alt='Class Banner'
                         cldImg={bannerPhoto(
-                            classDetails.bannerCldPubId ?? '',
+                            classDetails.bannerCldPubId,
                             classDetails.name
                         )}
                     />
